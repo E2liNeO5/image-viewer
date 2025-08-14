@@ -1,0 +1,59 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  .image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+    max-width: 60%;
+    max-height: 80%;
+    border: 5px solid #555;
+    background-color: #ccc;
+    position: relative;
+
+    .buttons {
+      display: flex;
+      flex-flow: row nowrap;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+
+      .btn {
+        padding: 2px;
+        background-color: #032fb4;
+        color: #fff;
+        margin-left: 5px;
+        transition: background-color .2s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #021d6e;
+        }
+      }
+    }
+
+    img {
+      object-fit: contain;
+      cursor: grab;
+      
+      &:active {
+        cursor: grabbing;
+      }
+      
+      &.size_by_width {
+        width: 80%;
+      }
+
+      &.size_by_height {
+        height: 80%;
+      }
+    }
+  }
+}
